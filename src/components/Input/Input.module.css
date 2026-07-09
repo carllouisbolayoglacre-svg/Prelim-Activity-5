@@ -1,0 +1,73 @@
+/* Input.module.css */
+
+/* =========================================
+   1. The Layout Wrapper
+   ========================================= */
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+  font-family: "Frutiger", "Frutiger Linotype", "Segoe UI", sans-serif;
+}
+
+/* =========================================
+   2. The Label
+   ========================================= */
+.inputGroup label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #003366; /* Deep Aero Blue */
+  margin-left: 4px;
+  
+  /* White halo for legibility over complex backgrounds */
+  text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+/* =========================================
+   3. The Recessed Input Field
+   ========================================= */
+.inputElement {
+  appearance: none;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 16px;
+  font-size: 16px;
+  color: #1E293B;
+  
+  /* Slightly translucent white to blend with glass containers */
+  background: rgba(255, 255, 255, 0.85);
+  
+  /* Soft grey/white border */
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 8px; /* Or use 20px for a pill-shaped input */
+  
+  /* Inset shadow makes it look physically indented */
+  box-shadow: 
+    inset 0 2px 5px rgba(0, 0, 0, 0.1),       /* Dark top inner edge */
+    0 1px 0 rgba(255, 255, 255, 0.9);         /* Bright bottom outer edge */
+    
+  transition: all 0.2s ease;
+}
+
+/* Placeholder styling */
+.inputElement::placeholder {
+  color: #94A3B8;
+  font-style: italic;
+}
+
+/* =========================================
+   4. The Focus State (The Aero Glow)
+   ========================================= */
+.inputElement:focus {
+  outline: none;
+  background: #FFFFFF;
+  
+  /* Changes border to Aero Cyan */
+  border-color: #4DD0E1; 
+  
+  /* Replaces the heavy inset shadow with a bright outer glow */
+  box-shadow: 
+    inset 0 1px 2px rgba(0, 0, 0, 0.05), 
+    0 0 10px rgba(77, 208, 225, 0.6);
+}

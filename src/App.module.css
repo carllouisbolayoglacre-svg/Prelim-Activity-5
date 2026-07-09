@@ -1,4 +1,5 @@
-main{
+/* src/App.module.css */
+.mainContainer {
     display: flex;
     justify-content: center; 
     align-items: stretch; 
