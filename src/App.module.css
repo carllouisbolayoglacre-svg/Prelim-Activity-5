@@ -1,0 +1,9 @@
+main{
+    display: flex;
+    justify-content: center; 
+    align-items: stretch; 
+    flex-direction: row; 
+    flex-wrap: nowrap; 
+    gap: 3rem;
+    padding: 2rem;
+}

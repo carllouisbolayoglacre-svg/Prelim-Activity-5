@@ -1,0 +1,59 @@
+/* Button.module.css */
+
+.btnPrimary {
+  /* Reset default button styles */
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  
+  /* Pill shape and sizing */
+  border-radius: 50px;
+  padding: 12px 28px;
+  font-family: "Frutiger", "Frutiger Linotype", "Segoe UI", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  
+  /* Deep text shadow for high contrast on the blue background */
+  text-shadow: 0 -1px 2px rgba(0, 0, 0, 0.4);
+  
+  /* The signature sharp gel gradient */
+  background: linear-gradient(
+    to bottom,
+    #6cb8ea 0%,
+    #2c88d9 45%,
+    #1863b6 48%,
+    #134e93 100%
+  );
+
+  /* Rim lighting (inner shadow) and soft drop shadow */
+  box-shadow: 
+    inset 0 2px 2px rgba(255, 255, 255, 0.6),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.3),
+    0 4px 6px rgba(0, 0, 0, 0.2);
+    
+  transition: all 0.1s ease;
+}
+
+/* Hover state: Make the gel glow */
+.btnPrimary:hover {
+  filter: brightness(1.15);
+}
+
+/* Active state: Simulate pressing a physical, squishy button */
+.btnPrimary:active {
+  /* Invert the gradient */
+  background: linear-gradient(
+    to bottom,
+    #134e93 0%,
+    #1863b6 52%,
+    #2c88d9 55%,
+    #6cb8ea 100%
+  );
+  /* Push the shadows in */
+  box-shadow: 
+    inset 0 3px 6px rgba(0, 0, 0, 0.5),
+    0 1px 2px rgba(0, 0, 0, 0.1);
+  /* Physically move it down */
+  transform: translateY(2px);
+}

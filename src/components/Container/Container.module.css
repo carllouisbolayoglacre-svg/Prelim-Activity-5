@@ -1,0 +1,59 @@
+/* Container.module.css */
+
+/* =========================================
+   1. The Outer Frosted Glass Shell
+   ========================================= */
+.glassContainer {
+  /* Soft, semi-transparent gradient */
+  background: linear-gradient(
+    135deg, 
+    rgba(255, 255, 255, 0.45) 0%, 
+    rgba(255, 255, 255, 0.15) 100%
+  );
+  
+  /* The Aero blur effect */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  
+  /* Bright glossy rim and deep drop shadow */
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 
+    inset 0 1px 1px rgba(255, 255, 255, 0.9), /* Top inner glare */
+    inset 0 -1px 2px rgba(0, 0, 0, 0.05),     /* Bottom inner shadow */
+    0 12px 32px rgba(0, 0, 0, 0.15);          /* Ambient drop shadow */
+    
+  border-radius: 16px;
+  padding: 24px;
+  
+  /* Standardizing text inside the container */
+  font-family: "Frutiger", "Segoe UI", sans-serif;
+  color: #1E293B;
+}
+
+/* Container Title */
+.title {
+  margin: 0 0 16px 4px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #003366;
+  
+  /* White glow to ensure it's readable over the glass background */
+  text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+/* =========================================
+   2. The Recessed Inner Panel
+   ========================================= */
+.insetPanel {
+  /* Solid or nearly-solid background for readable content */
+  background-color: rgba(255, 255, 255, 0.7);
+  
+  /* Inner shadow to make it look carved into the glass */
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: 
+    inset 0 2px 5px rgba(0, 0, 0, 0.08),  /* Dark inner shadow at top */
+    0 1px 0 rgba(255, 255, 255, 0.8);     /* Bright highlight at bottom edge */
+    
+  border-radius: 8px;
+  padding: 20px;
+}
